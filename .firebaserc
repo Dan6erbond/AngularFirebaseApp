@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularprojects-3fcf9": {
+      "hosting": {
+        "awesome": [
+          "angularprojects-3fcf9"
+        ]
+      }
+    }
+  }
+}
