@@ -18,7 +18,18 @@ import { ValidFormComponent } from './valid-form/valid-form.component';
 import { SubmitFormComponent } from './submit-form/submit-form.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AnimalsComponent, AnimalDetailComponent, ErrorComponent, BasicFormComponent, NestedFormComponent, ArrayFormComponent, ValidFormComponent, SubmitFormComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AnimalsComponent,
+    AnimalDetailComponent,
+    ErrorComponent,
+    BasicFormComponent,
+    NestedFormComponent,
+    ArrayFormComponent,
+    ValidFormComponent,
+    SubmitFormComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
