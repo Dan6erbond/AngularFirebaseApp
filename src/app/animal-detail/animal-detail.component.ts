@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
-import { switchMap, flatMap } from 'rxjs/operators';
+import { switchMap, flatMap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-animal-detail',
@@ -13,15 +13,6 @@ export class AnimalDetailComponent implements OnInit {
   constructor(private afs: AngularFirestore, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.animal$ = this.route.paramMap.pipe(
-      switchMap((params) => {
-        const name = params.get('name');
-        return this.afs.collection('animals', ref => ref.where('name', '==', name).limit(1))
-          .valueChanges()
-          .pipe(
-            flatMap(animal => animal)
-          );
-      })
-    );
+    this.animal$ = this.route.data.pipe(flatMap((animals) => animals[0]));
   }
 }

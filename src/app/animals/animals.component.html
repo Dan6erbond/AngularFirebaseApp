@@ -2,7 +2,7 @@
 
 <ul>
   <li *ngFor="let animal of animals$ | async">
-    <a [routerLink]="['/animals', animal.name]">
+    <a routerLinkActive="active" [routerLink]="['/animals', animal.name]">
       {{ animal.name }}
     </a>
   </li>
