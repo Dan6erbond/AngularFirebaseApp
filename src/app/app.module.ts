@@ -1,21 +1,27 @@
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
+import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
+import { AnimalsComponent } from './animals/animals.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AnimalsComponent } from './animals/animals.component';
-import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
-import { ErrorComponent } from './error/error.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BasicFormComponent } from './basic-form/basic-form.component';
-import { NestedFormComponent } from './nested-form/nested-form.component';
 import { ArrayFormComponent } from './array-form/array-form.component';
-import { ValidFormComponent } from './valid-form/valid-form.component';
+import { BasicFormComponent } from './basic-form/basic-form.component';
+import { ErrorComponent } from './error/error.component';
+import { HomeComponent } from './home/home.component';
+import { NestedFormComponent } from './nested-form/nested-form.component';
 import { SubmitFormComponent } from './submit-form/submit-form.component';
+import { ValidFormComponent } from './valid-form/valid-form.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +43,12 @@ import { SubmitFormComponent } from './submit-form/submit-form.component';
     AngularFirestoreModule,
     AngularFireAuthModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
